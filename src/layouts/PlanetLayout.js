@@ -1,49 +1,53 @@
 import { Outlet, NavLink, useParams } from "react-router-dom";
 import { planets } from "../data/planets";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./planetL.css";
 
 function PlanetLayout() {
   const { planet } = useParams(); // es exeba :planet-s pathsshi
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(`/${planet}/overview`);
+  }, []);
   return (
-    <div class="center">
-      <div class="grid">
+    <div className="center">
+      <div className="grid">
         <Outlet context={[planet]} />
-
-        <div class="innerLinks">
-          <button class={planet}>
+        <div className="innerLinks">
+          <button className={planet}>
             <NavLink to="overview">
-              <span class="n"> 01</span> OVERVIEW
+              <span className="n"> 01</span> OVERVIEW
             </NavLink>
           </button>
-          <button class={planet}>
+          <button className={planet}>
             <NavLink to="intstr">
-              <span class="n">02</span> <span class="clear">Internal</span>{" "}
-              Structire
+              <span className="n">02</span>{" "}
+              <span className="clear">Internal</span> Structire
             </NavLink>
           </button>
-          <button class={planet}>
+          <button className={planet}>
             <NavLink to="geology">
-              <span class="n">03</span> SURFACE{" "}
-              <span class="clear">GEOLOGY</span>
+              <span className="n">03</span> SURFACE{" "}
+              <span className="clear">GEOLOGY</span>
             </NavLink>
           </button>
         </div>
       </div>
-      <div class="numinfo">
-        <div class="box">
+      <div className="numinfo">
+        <div className="box">
           <p>ROTATION TIME</p>
           <h2>{planets[planet].rotTime}</h2>
         </div>
-        <div class="box">
+        <div className="box">
           <p>REVOLUTION TIME</p>
           <h2>{planets[planet].revTime}</h2>
         </div>
-        <div class="box">
+        <div className="box">
           <p>radius</p>
           <h2>{planets[planet].radius}</h2>
         </div>
-        <div class="box">
+        <div className="box">
           <p>AVERAGE TEMP.</p>
           <h2>{planets[planet].avgTemp}</h2>
         </div>

@@ -2,7 +2,6 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import { planets } from "../data/planets";
 import "../layouts/planetL.css";
-import myImage from "../images/geology-neptune.png";
 
 export default function Geology() {
   const [planet] = useOutletContext();
