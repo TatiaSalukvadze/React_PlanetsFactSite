@@ -20,7 +20,7 @@ export default function RootLayout() {
   }
 
   useEffect(() => {
-    navigate(`/mercury`);
+    navigate(`/React_PlanetsFactSite/mercury`);
   }, []);
   return (
     <div className="root-layout">
@@ -30,42 +30,63 @@ export default function RootLayout() {
           <h1>The Planets</h1>
           <img src={hamb} onClick={() => togMenu()} alt="" />
           <span ref={navs} class="hide">
-            <NavLink to="mercury" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/mercury"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#DEF4FC" }}></div>
               MERCURY
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="venus" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/venus"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#F7CC7F" }}></div>
               VENUS
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="earth" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/earth"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#545BFE" }}></div>
               EARTH
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="mars" onClick={() => togMenu()}>
+            <NavLink to="/React_PlanetsFactSite/mars" onClick={() => togMenu()}>
               <div class="circle" style={{ backgroundColor: "#FF6A45" }}></div>
               MARS
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="jupiter" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/jupiter"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#ECAD7A" }}></div>
               JUPITER
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="saturn" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/saturn"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#FCCB6B" }}></div>
               SATURN
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="uranus" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/uranus"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#65F0D5" }}></div>
               URANUS
               <img src={ar} alt="" class="arrow" />
             </NavLink>
-            <NavLink to="neptune" onClick={() => togMenu()}>
+            <NavLink
+              to="/React_PlanetsFactSite/neptune"
+              onClick={() => togMenu()}
+            >
               <div class="circle" style={{ backgroundColor: "#497EFA" }}></div>
               NEPTUNE
               <img src={ar} alt="" class="arrow" />

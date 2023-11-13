@@ -18,7 +18,7 @@ import PlanetLayout from "./layouts/PlanetLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/React_PlanetsFactSite" element={<RootLayout />}>
       <Route path=":planet" element={<PlanetLayout />}>
         <Route index element={<Overview />} />
         <Route path="overview" element={<Overview />} />
