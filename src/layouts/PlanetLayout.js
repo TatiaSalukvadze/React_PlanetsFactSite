@@ -8,7 +8,7 @@ function PlanetLayout() {
   const { planet } = useParams(); // es exeba :planet-s pathsshi
   const navigate = useNavigate();
   useEffect(() => {
-    navigate(`/React_PlanetsFactSite//${planet}/overview`);
+    navigate(`/React_PlanetsFactSite/${planet}/overview`);
   }, []);
   return (
     <div className="center">
